@@ -1,0 +1,32 @@
+# This is a generated file. Not intended for manual editing.
+services:
+  grpc.server:
+    build:
+      context: "/Users/nicke/Projects/gRPC_Test"
+      dockerfile: "gRPC.Server/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "/riderDebugger/linux-arm64/dotnet/dotnet"
+    - "/riderDebugger/JetBrains.Debugger.Worker.exe"
+    - "--mode=server"
+    - "--frontend-port=57100"
+    - "--backend-port=57300"
+    environment:
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+      NUGET_PACKAGES: "/Users/nicke/.nuget/packages"
+      NUGET_FALLBACK_PACKAGES: "/Users/nicke/.nuget/packages"
+      RIDER_DEBUGGER_LOG_DIR: "/riderLogs"
+      RESHARPER_LOG_CONF: "/riderLogsConf/backend-log.xml"
+    image: "grpc.server:dev"
+    ports:
+    - "127.0.0.1:57001:57100"
+    - "127.0.0.1:57201:57300"
+    volumes:
+    - "/Users/nicke/.nuget/packages:/root/.nuget/fallbackpackages"
+    - "/Users/nicke/Projects/gRPC_Test/gRPC.Server:/app:rw"
+    - "/Users/nicke/Projects/gRPC_Test:/src:rw"
+    - "/Users/nicke/.local/share/JetBrains/RiderRemoteDebugger/2023.2EAP6/LinuxArm64:/riderDebugger"
+    - "/Applications/Rider EAP.app/Contents/bin:/riderLogsConf"
+    - "/Users/nicke/Library/Logs/JetBrains/Rider2023.2/DebuggerWorker/JetBrains.Debugger.Worker.2023_7_03_21_42_43:/riderLogs:rw"
+    working_dir: "/app"

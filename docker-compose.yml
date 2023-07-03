@@ -1,0 +1,16 @@
+﻿services:
+  grpc.server:
+    image: grpc.server
+    build:
+      context: .
+      dockerfile: gRPC.Server/Dockerfile
+      args:
+        - PASSWORD_ENV_SEEDED=password123
+    ports:
+      - 15005:443
+    environment:
+      - PASSWORD_ENV_SEEDED=password123
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=password123
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+      - ASPNETCORE_URLS=https://+:80;http://+:5000
+      - ASPNETCORE_ENVIRONMENT=Development

@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gRPC.Server", "gRPC.Server\gRPC.Server.csproj", "{0E8B63D2-7F10-4205-945A-16F768DEC2C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gRPC.Shared", "gRPC.Shared\gRPC.Shared.csproj", "{8EF62A89-E7B9-4DEC-82D8-2845E3858ADB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gRPC.Client", "gRPC.Client\gRPC.Client.csproj", "{29CEA8FD-151F-4151-B82E-9DAEFEA1E51D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{216EC240-803C-4FF0-9AD7-15B1BD9471AB}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0E8B63D2-7F10-4205-945A-16F768DEC2C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E8B63D2-7F10-4205-945A-16F768DEC2C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E8B63D2-7F10-4205-945A-16F768DEC2C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E8B63D2-7F10-4205-945A-16F768DEC2C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EF62A89-E7B9-4DEC-82D8-2845E3858ADB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EF62A89-E7B9-4DEC-82D8-2845E3858ADB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EF62A89-E7B9-4DEC-82D8-2845E3858ADB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EF62A89-E7B9-4DEC-82D8-2845E3858ADB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29CEA8FD-151F-4151-B82E-9DAEFEA1E51D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29CEA8FD-151F-4151-B82E-9DAEFEA1E51D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29CEA8FD-151F-4151-B82E-9DAEFEA1E51D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29CEA8FD-151F-4151-B82E-9DAEFEA1E51D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
